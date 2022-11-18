@@ -40,3 +40,33 @@ code {
 .navbar--name{
   margin-left: 1rem;
 }
+
+.form{
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  margin-top: 3rem;
+  gap: 1rem;
+  padding: 40px;
+}
+.form--button{
+  grid-column: 1/-1;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  border-radius: 5px;
+  color: white;
+  Font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: -0.1em;
+  border: none;
+  cursor: pointer;
+}
+
+.form--input{
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+  text-align: left;
+  text-indent: 10px;
+}
