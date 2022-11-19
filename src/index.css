@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+.main{
+  padding: 40px;
+}
+
 .navbar{
   display: flex;
   justify-content: space-between;
