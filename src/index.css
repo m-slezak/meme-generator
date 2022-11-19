@@ -70,3 +70,13 @@ code {
   text-align: left;
   text-indent: 10px;
 }
+
+.meme--image{
+max-width: 100%;
+}
+.meme{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
