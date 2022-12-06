@@ -26,16 +26,27 @@ const Meme = () => {
 
   return (
     <main className='meme'>
-        <div className='form'>
-            <input type="text" placeholder="Top text" className='form--input'/>
-            <input type="text" placeholder="Bottom text" className='form--input'/>
+        <form className='form'>
+            <input
+            type="text"
+            placeholder="Top text"
+             className='form--input'/>
+            <input
+            type="text"
+            placeholder="Bottom text"
+            className='form--input'/>
            <button
            className='form--button'
            onClick = {getRandomImg}>
             Get a new meme image  🖼</button>
-        </div>
+        </form>
+        <div className="meme--container">
+                <img src={meme.randomImage} alt="memeImage" className='meme--image'/>
+                <h2 className="meme--text top">One does not simply</h2>
+                <h2 className="meme--text bottom">Walk into Mordor</h2>
+            </div>
 
-        <img src={meme.randomImage} alt="memeImage" className='meme--image'/>
+
     </main>
   )
 }
