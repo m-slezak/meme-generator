@@ -12,15 +12,11 @@ const Meme = () => {
         randomImage:"http://i.imgflip.com/1bij.jpg"
     })
 
-    const [text, setText] = useState({
-        top: "",
-        bottom: ""
-    })
 
     function handleChange(event) {
         const {name, value} = event.target
-        setText(prevText => ({
-            ...prevText,
+        setMeme(prevMeme => ({
+            ...prevMeme,
             [name]: value
         }))
     }
@@ -36,11 +32,16 @@ const Meme = () => {
         }))
     }
 
+    function submitHandler(event) {
+        event.preventDefault()
+
+    }
+
 
 
   return (
     <main className='meme'>
-        <form className='form'>
+        <form className='form' onSubmit={submitHandler}>
             <input
             type="text"
             placeholder="Top text"
