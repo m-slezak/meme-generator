@@ -12,6 +12,18 @@ const Meme = () => {
         randomImage:"http://i.imgflip.com/1bij.jpg"
     })
 
+    const [text, setText] = useState({
+        top: "",
+        bottom: ""
+    })
+
+    function handleChange(event) {
+        const {name, value} = event.target
+        setText(prevText => ({
+            ...prevText,
+            [name]: value
+        }))
+    }
 
 
     function getRandomImg() {
@@ -24,17 +36,27 @@ const Meme = () => {
         }))
     }
 
+
+
   return (
     <main className='meme'>
         <form className='form'>
             <input
             type="text"
             placeholder="Top text"
-             className='form--input'/>
+            className='form--input'
+            name="topText"
+            value={text.topText}
+            onChange={handleChange}
+            />
             <input
             type="text"
             placeholder="Bottom text"
-            className='form--input'/>
+            className='form--input'
+            name="bottomText"
+            value={text.bottomText}
+            onChange={handleChange}
+            />
            <button
            className='form--button'
            onClick = {getRandomImg}>
